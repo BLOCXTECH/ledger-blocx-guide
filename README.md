@@ -1,4 +1,4 @@
-## Note: This guide only works on ledger nanos, and your device must have sufficent space to install the app
+## Note: This guide only works on ledger nanos, and your device must have sufficient space to install the app
 
 ### OS: LINUX
 
@@ -12,7 +12,7 @@
 wget -q -O - https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh | sudo bash
 ```
 
-- Edit `Makefile`, find `COIN=bitcoin_legacy` and replace `COIN=blocx`, this line will use to select the app which you want to upload in your ledger nanos.
+- Edit `Makefile`, find `COIN=bitcoin_legacy` and replace it to `COIN=blocx`, this line will use to select the app which you want to upload in your ledger nanos.
 
 ### Download Blocx-ledger
 
@@ -34,7 +34,7 @@ cd app-bitcoin
 sudo docker run --rm -ti --user "$(id -u):$(id -g)" --privileged -v "/dev/bus/usb:/dev/bus/usb" -v "$(realpath .):/app" ghcr.io/ledgerhq/ledger-app-builder/ledger-app-dev-tools:latest
 ```
 
-- After running above command you will new terminal, something like : `bash-5.1$`
+- After running above command you will get new terminal, it will look something like : `bash-5.1$`
 
 - Run below command in this terminal
 
@@ -44,10 +44,10 @@ BOLOS_SDK=$NANOS_SDK
 make DEBUG=1
 ```
 
-- Now below command will load blocx application to your ledger nanos
+- Now, below command will load blocx application to your ledger nanos
 
 ```javascript
 make load
 ```
 
-#### Note: During make load there will be some confirmations in ledger.
+#### Note: During make load command, there will be some conformations in ledger.
